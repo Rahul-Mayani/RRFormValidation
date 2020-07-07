@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2159C505EB51D10FC33F3741 /* Pods_RRFormValidation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304C45A894958B87A6FC7ED /* Pods_RRFormValidation.framework */; };
+		EE77C5F824B2FEFA00B7C702 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C5F724B2FEFA00B7C702 /* AppDelegate.swift */; };
+		EE77C5FF24B2FEFA00B7C702 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE77C5FD24B2FEFA00B7C702 /* Main.storyboard */; };
+		EE77C60124B2FEFC00B7C702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE77C60024B2FEFC00B7C702 /* Assets.xcassets */; };
+		EE77C60424B2FEFC00B7C702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE77C60224B2FEFC00B7C702 /* LaunchScreen.storyboard */; };
+		EE77C60C24B301CE00B7C702 /* RRFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C60B24B301CE00B7C702 /* RRFormModel.swift */; };
+		EE77C60E24B301E000B7C702 /* RRFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C60D24B301E000B7C702 /* RRFormViewModel.swift */; };
+		EE77C61024B3024300B7C702 /* RRFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C60F24B3024300B7C702 /* RRFormViewController.swift */; };
+		EE77C61924B303A700B7C702 /* CustomTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C61324B303A700B7C702 /* CustomTransitionViewController.swift */; };
+		EE77C61A24B303A700B7C702 /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C61424B303A700B7C702 /* SpinerLayer.swift */; };
+		EE77C61B24B303A700B7C702 /* TransitionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C61524B303A700B7C702 /* TransitionButton.swift */; };
+		EE77C61D24B303A700B7C702 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C61724B303A700B7C702 /* FadeTransition.swift */; };
+		EE77C61E24B303A700B7C702 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C61824B303A700B7C702 /* CGRectExtension.swift */; };
+		EE77C62024B3040900B7C702 /* RRBallRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C61F24B3040900B7C702 /* RRBallRotate.swift */; };
+		EE77C64E24B305EE00B7C702 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C62224B305EE00B7C702 /* SearchTextField.swift */; };
+		EE77C64F24B305EE00B7C702 /* SVPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C62524B305EE00B7C702 /* SVPinView.swift */; };
+		EE77C65024B305EE00B7C702 /* SVPinField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C62624B305EE00B7C702 /* SVPinField.swift */; };
+		EE77C65124B305EE00B7C702 /* SVPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE77C62824B305EE00B7C702 /* SVPinView.xib */; };
+		EE77C65224B305EE00B7C702 /* SVPinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE77C62924B305EE00B7C702 /* SVPinCell.xib */; };
+		EE77C65324B305EF00B7C702 /* FormTextFieldClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C62B24B305EE00B7C702 /* FormTextFieldClearButton.swift */; };
+		EE77C65424B305EF00B7C702 /* FormTextFieldTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C62C24B305EE00B7C702 /* FormTextFieldTypeManager.swift */; };
+		EE77C65524B305EF00B7C702 /* RequiredInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C62E24B305EE00B7C702 /* RequiredInputValidator.swift */; };
+		EE77C65624B305EF00B7C702 /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C62F24B305EE00B7C702 /* InputValidator.swift */; };
+		EE77C65724B305EF00B7C702 /* InputValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63024B305EE00B7C702 /* InputValidatable.swift */; };
+		EE77C65824B305EF00B7C702 /* CardExpirationDateInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63124B305EE00B7C702 /* CardExpirationDateInputValidator.swift */; };
+		EE77C65924B305EF00B7C702 /* DecimalInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63224B305EE00B7C702 /* DecimalInputValidator.swift */; };
+		EE77C65A24B305EF00B7C702 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63324B305EE00B7C702 /* FormTextField.swift */; };
+		EE77C65B24B305EF00B7C702 /* CardNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63524B305EE00B7C702 /* CardNumberFormatter.swift */; };
+		EE77C65C24B305EF00B7C702 /* CardExpirationDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63624B305EE00B7C702 /* CardExpirationDateFormatter.swift */; };
+		EE77C65D24B305EF00B7C702 /* Formattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63724B305EE00B7C702 /* Formattable.swift */; };
+		EE77C65E24B305EF00B7C702 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63924B305EE00B7C702 /* Validation.swift */; };
+		EE77C65F24B305EF00B7C702 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63B24B305EE00B7C702 /* Constants.swift */; };
+		EE77C66024B305EF00B7C702 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63D24B305EE00B7C702 /* TextField.swift */; };
+		EE77C66124B305EF00B7C702 /* CountryCodePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63E24B305EE00B7C702 /* CountryCodePickerViewController.swift */; };
+		EE77C66224B305EF00B7C702 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C63F24B305EE00B7C702 /* PhoneNumber.swift */; };
+		EE77C66324B305EF00B7C702 /* RegexManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64024B305EE00B7C702 /* RegexManager.swift */; };
+		EE77C66424B305EF00B7C702 /* MetadataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64124B305EE00B7C702 /* MetadataTypes.swift */; };
+		EE77C66524B305EF00B7C702 /* MetadataParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64224B305EE00B7C702 /* MetadataParsing.swift */; };
+		EE77C66624B305EF00B7C702 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64324B305EE00B7C702 /* ParseManager.swift */; };
+		EE77C66724B305EF00B7C702 /* PhoneNumberMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = EE77C64524B305EE00B7C702 /* PhoneNumberMetadata.json */; };
+		EE77C66824B305EF00B7C702 /* NSRegularExpression+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64624B305EE00B7C702 /* NSRegularExpression+Swift.swift */; };
+		EE77C66924B305EF00B7C702 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64724B305EE00B7C702 /* Formatter.swift */; };
+		EE77C66A24B305EF00B7C702 /* MetadataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64824B305EE00B7C702 /* MetadataManager.swift */; };
+		EE77C66B24B305EF00B7C702 /* PartialFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64924B305EE00B7C702 /* PartialFormatter.swift */; };
+		EE77C66C24B305EF00B7C702 /* PhoneNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64A24B305EE00B7C702 /* PhoneNumberFormatter.swift */; };
+		EE77C66D24B305EF00B7C702 /* PhoneNumberKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64B24B305EE00B7C702 /* PhoneNumberKit.swift */; };
+		EE77C66E24B305EF00B7C702 /* PhoneNumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64C24B305EE00B7C702 /* PhoneNumberParser.swift */; };
+		EE77C66F24B305EF00B7C702 /* PagingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C64D24B305EE00B7C702 /* PagingCollectionView.swift */; };
+		EE77C67124B306BF00B7C702 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C67024B306BF00B7C702 /* TextField+Extension.swift */; };
+		EE77C67324B3076E00B7C702 /* RRFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C67224B3076E00B7C702 /* RRFormTextField.swift */; };
+		EE77C67524B3081200B7C702 /* Rx+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C67424B3081200B7C702 /* Rx+Extension.swift */; };
+		EE77C67724B317B600B7C702 /* General+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C67624B317B600B7C702 /* General+Extensions.swift */; };
+		EE77C67924B31B3D00B7C702 /* RRFormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C67824B31B3D00B7C702 /* RRFormButton.swift */; };
+		EE77C67B24B31B7C00B7C702 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C67A24B31B7C00B7C702 /* UIAlertController+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		342D0958BC677EC471B08941 /* Pods-RRFormValidation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RRFormValidation.debug.xcconfig"; path = "Target Support Files/Pods-RRFormValidation/Pods-RRFormValidation.debug.xcconfig"; sourceTree = "<group>"; };
+		5304C45A894958B87A6FC7ED /* Pods_RRFormValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RRFormValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7201F28C1B9D3F4A5F87B8C /* Pods-RRFormValidation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RRFormValidation.release.xcconfig"; path = "Target Support Files/Pods-RRFormValidation/Pods-RRFormValidation.release.xcconfig"; sourceTree = "<group>"; };
+		EE77C5F424B2FEFA00B7C702 /* RRFormValidation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RRFormValidation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE77C5F724B2FEFA00B7C702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE77C5FE24B2FEFA00B7C702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE77C60024B2FEFC00B7C702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE77C60324B2FEFC00B7C702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE77C60524B2FEFC00B7C702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE77C60B24B301CE00B7C702 /* RRFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRFormModel.swift; sourceTree = "<group>"; };
+		EE77C60D24B301E000B7C702 /* RRFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRFormViewModel.swift; sourceTree = "<group>"; };
+		EE77C60F24B3024300B7C702 /* RRFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRFormViewController.swift; sourceTree = "<group>"; };
+		EE77C61324B303A700B7C702 /* CustomTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionViewController.swift; sourceTree = "<group>"; };
+		EE77C61424B303A700B7C702 /* SpinerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
+		EE77C61524B303A700B7C702 /* TransitionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionButton.swift; sourceTree = "<group>"; };
+		EE77C61724B303A700B7C702 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		EE77C61824B303A700B7C702 /* CGRectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
+		EE77C61F24B3040900B7C702 /* RRBallRotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRBallRotate.swift; sourceTree = "<group>"; };
+		EE77C62224B305EE00B7C702 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		EE77C62524B305EE00B7C702 /* SVPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVPinView.swift; sourceTree = "<group>"; };
+		EE77C62624B305EE00B7C702 /* SVPinField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVPinField.swift; sourceTree = "<group>"; };
+		EE77C62824B305EE00B7C702 /* SVPinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVPinView.xib; sourceTree = "<group>"; };
+		EE77C62924B305EE00B7C702 /* SVPinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVPinCell.xib; sourceTree = "<group>"; };
+		EE77C62B24B305EE00B7C702 /* FormTextFieldClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldClearButton.swift; sourceTree = "<group>"; };
+		EE77C62C24B305EE00B7C702 /* FormTextFieldTypeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldTypeManager.swift; sourceTree = "<group>"; };
+		EE77C62E24B305EE00B7C702 /* RequiredInputValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredInputValidator.swift; sourceTree = "<group>"; };
+		EE77C62F24B305EE00B7C702 /* InputValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
+		EE77C63024B305EE00B7C702 /* InputValidatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputValidatable.swift; sourceTree = "<group>"; };
+		EE77C63124B305EE00B7C702 /* CardExpirationDateInputValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardExpirationDateInputValidator.swift; sourceTree = "<group>"; };
+		EE77C63224B305EE00B7C702 /* DecimalInputValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalInputValidator.swift; sourceTree = "<group>"; };
+		EE77C63324B305EE00B7C702 /* FormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		EE77C63524B305EE00B7C702 /* CardNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardNumberFormatter.swift; sourceTree = "<group>"; };
+		EE77C63624B305EE00B7C702 /* CardExpirationDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardExpirationDateFormatter.swift; sourceTree = "<group>"; };
+		EE77C63724B305EE00B7C702 /* Formattable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formattable.swift; sourceTree = "<group>"; };
+		EE77C63924B305EE00B7C702 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		EE77C63B24B305EE00B7C702 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EE77C63D24B305EE00B7C702 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		EE77C63E24B305EE00B7C702 /* CountryCodePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCodePickerViewController.swift; sourceTree = "<group>"; };
+		EE77C63F24B305EE00B7C702 /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		EE77C64024B305EE00B7C702 /* RegexManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexManager.swift; sourceTree = "<group>"; };
+		EE77C64124B305EE00B7C702 /* MetadataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetadataTypes.swift; sourceTree = "<group>"; };
+		EE77C64224B305EE00B7C702 /* MetadataParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetadataParsing.swift; sourceTree = "<group>"; };
+		EE77C64324B305EE00B7C702 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
+		EE77C64524B305EE00B7C702 /* PhoneNumberMetadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PhoneNumberMetadata.json; sourceTree = "<group>"; };
+		EE77C64624B305EE00B7C702 /* NSRegularExpression+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Swift.swift"; sourceTree = "<group>"; };
+		EE77C64724B305EE00B7C702 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		EE77C64824B305EE00B7C702 /* MetadataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetadataManager.swift; sourceTree = "<group>"; };
+		EE77C64924B305EE00B7C702 /* PartialFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartialFormatter.swift; sourceTree = "<group>"; };
+		EE77C64A24B305EE00B7C702 /* PhoneNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberFormatter.swift; sourceTree = "<group>"; };
+		EE77C64B24B305EE00B7C702 /* PhoneNumberKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberKit.swift; sourceTree = "<group>"; };
+		EE77C64C24B305EE00B7C702 /* PhoneNumberParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberParser.swift; sourceTree = "<group>"; };
+		EE77C64D24B305EE00B7C702 /* PagingCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionView.swift; sourceTree = "<group>"; };
+		EE77C67024B306BF00B7C702 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
+		EE77C67224B3076E00B7C702 /* RRFormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRFormTextField.swift; sourceTree = "<group>"; };
+		EE77C67424B3081200B7C702 /* Rx+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Extension.swift"; sourceTree = "<group>"; };
+		EE77C67624B317B600B7C702 /* General+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "General+Extensions.swift"; sourceTree = "<group>"; };
+		EE77C67824B31B3D00B7C702 /* RRFormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRFormButton.swift; sourceTree = "<group>"; };
+		EE77C67A24B31B7C00B7C702 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE77C5F124B2FEFA00B7C702 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2159C505EB51D10FC33F3741 /* Pods_RRFormValidation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7969B35D02F60FC27B469301 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				342D0958BC677EC471B08941 /* Pods-RRFormValidation.debug.xcconfig */,
+				D7201F28C1B9D3F4A5F87B8C /* Pods-RRFormValidation.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE77C5EB24B2FEFA00B7C702 = {
+			isa = PBXGroup;
+			children = (
+				EE77C5F624B2FEFA00B7C702 /* RRFormValidation */,
+				EE77C5F524B2FEFA00B7C702 /* Products */,
+				7969B35D02F60FC27B469301 /* Pods */,
+				FB7871A60299D073CB77560B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE77C5F524B2FEFA00B7C702 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C5F424B2FEFA00B7C702 /* RRFormValidation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE77C5F624B2FEFA00B7C702 /* RRFormValidation */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C61124B303A700B7C702 /* Utility Classes */,
+				EE77C5F724B2FEFA00B7C702 /* AppDelegate.swift */,
+				EE77C60F24B3024300B7C702 /* RRFormViewController.swift */,
+				EE77C60D24B301E000B7C702 /* RRFormViewModel.swift */,
+				EE77C60B24B301CE00B7C702 /* RRFormModel.swift */,
+				EE77C5FD24B2FEFA00B7C702 /* Main.storyboard */,
+				EE77C60024B2FEFC00B7C702 /* Assets.xcassets */,
+				EE77C60224B2FEFC00B7C702 /* LaunchScreen.storyboard */,
+				EE77C60524B2FEFC00B7C702 /* Info.plist */,
+			);
+			path = RRFormValidation;
+			sourceTree = "<group>";
+		};
+		EE77C61124B303A700B7C702 /* Utility Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C62A24B305EE00B7C702 /* FormTextField */,
+				EE77C64D24B305EE00B7C702 /* PagingCollectionView.swift */,
+				EE77C63A24B305EE00B7C702 /* PhoneNumberKit */,
+				EE77C62324B305EE00B7C702 /* Pinnedview */,
+				EE77C62124B305EE00B7C702 /* SearchTextField */,
+				EE77C61224B303A700B7C702 /* TransitionButton */,
+				EE77C67024B306BF00B7C702 /* TextField+Extension.swift */,
+				EE77C67624B317B600B7C702 /* General+Extensions.swift */,
+				EE77C67A24B31B7C00B7C702 /* UIAlertController+Extension.swift */,
+				EE77C67424B3081200B7C702 /* Rx+Extension.swift */,
+				EE77C67224B3076E00B7C702 /* RRFormTextField.swift */,
+				EE77C67824B31B3D00B7C702 /* RRFormButton.swift */,
+			);
+			path = "Utility Classes";
+			sourceTree = "<group>";
+		};
+		EE77C61224B303A700B7C702 /* TransitionButton */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C61324B303A700B7C702 /* CustomTransitionViewController.swift */,
+				EE77C61424B303A700B7C702 /* SpinerLayer.swift */,
+				EE77C61524B303A700B7C702 /* TransitionButton.swift */,
+				EE77C61F24B3040900B7C702 /* RRBallRotate.swift */,
+				EE77C61724B303A700B7C702 /* FadeTransition.swift */,
+				EE77C61824B303A700B7C702 /* CGRectExtension.swift */,
+			);
+			path = TransitionButton;
+			sourceTree = "<group>";
+		};
+		EE77C62124B305EE00B7C702 /* SearchTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C62224B305EE00B7C702 /* SearchTextField.swift */,
+			);
+			path = SearchTextField;
+			sourceTree = "<group>";
+		};
+		EE77C62324B305EE00B7C702 /* Pinnedview */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C62424B305EE00B7C702 /* Classes */,
+				EE77C62724B305EE00B7C702 /* XIB's */,
+			);
+			path = Pinnedview;
+			sourceTree = "<group>";
+		};
+		EE77C62424B305EE00B7C702 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C62524B305EE00B7C702 /* SVPinView.swift */,
+				EE77C62624B305EE00B7C702 /* SVPinField.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EE77C62724B305EE00B7C702 /* XIB's */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C62824B305EE00B7C702 /* SVPinView.xib */,
+				EE77C62924B305EE00B7C702 /* SVPinCell.xib */,
+			);
+			path = "XIB's";
+			sourceTree = "<group>";
+		};
+		EE77C62A24B305EE00B7C702 /* FormTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C62B24B305EE00B7C702 /* FormTextFieldClearButton.swift */,
+				EE77C62C24B305EE00B7C702 /* FormTextFieldTypeManager.swift */,
+				EE77C62D24B305EE00B7C702 /* InputValidator */,
+				EE77C63324B305EE00B7C702 /* FormTextField.swift */,
+				EE77C63424B305EE00B7C702 /* Formatter */,
+				EE77C63824B305EE00B7C702 /* Validation */,
+			);
+			path = FormTextField;
+			sourceTree = "<group>";
+		};
+		EE77C62D24B305EE00B7C702 /* InputValidator */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C62E24B305EE00B7C702 /* RequiredInputValidator.swift */,
+				EE77C62F24B305EE00B7C702 /* InputValidator.swift */,
+				EE77C63024B305EE00B7C702 /* InputValidatable.swift */,
+				EE77C63124B305EE00B7C702 /* CardExpirationDateInputValidator.swift */,
+				EE77C63224B305EE00B7C702 /* DecimalInputValidator.swift */,
+			);
+			path = InputValidator;
+			sourceTree = "<group>";
+		};
+		EE77C63424B305EE00B7C702 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C63524B305EE00B7C702 /* CardNumberFormatter.swift */,
+				EE77C63624B305EE00B7C702 /* CardExpirationDateFormatter.swift */,
+				EE77C63724B305EE00B7C702 /* Formattable.swift */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
+		EE77C63824B305EE00B7C702 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C63924B305EE00B7C702 /* Validation.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		EE77C63A24B305EE00B7C702 /* PhoneNumberKit */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C63B24B305EE00B7C702 /* Constants.swift */,
+				EE77C63C24B305EE00B7C702 /* UI */,
+				EE77C63F24B305EE00B7C702 /* PhoneNumber.swift */,
+				EE77C64024B305EE00B7C702 /* RegexManager.swift */,
+				EE77C64124B305EE00B7C702 /* MetadataTypes.swift */,
+				EE77C64224B305EE00B7C702 /* MetadataParsing.swift */,
+				EE77C64324B305EE00B7C702 /* ParseManager.swift */,
+				EE77C64424B305EE00B7C702 /* Resources */,
+				EE77C64624B305EE00B7C702 /* NSRegularExpression+Swift.swift */,
+				EE77C64724B305EE00B7C702 /* Formatter.swift */,
+				EE77C64824B305EE00B7C702 /* MetadataManager.swift */,
+				EE77C64924B305EE00B7C702 /* PartialFormatter.swift */,
+				EE77C64A24B305EE00B7C702 /* PhoneNumberFormatter.swift */,
+				EE77C64B24B305EE00B7C702 /* PhoneNumberKit.swift */,
+				EE77C64C24B305EE00B7C702 /* PhoneNumberParser.swift */,
+			);
+			path = PhoneNumberKit;
+			sourceTree = "<group>";
+		};
+		EE77C63C24B305EE00B7C702 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C63D24B305EE00B7C702 /* TextField.swift */,
+				EE77C63E24B305EE00B7C702 /* CountryCodePickerViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EE77C64424B305EE00B7C702 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE77C64524B305EE00B7C702 /* PhoneNumberMetadata.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FB7871A60299D073CB77560B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5304C45A894958B87A6FC7ED /* Pods_RRFormValidation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE77C5F324B2FEFA00B7C702 /* RRFormValidation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE77C60824B2FEFC00B7C702 /* Build configuration list for PBXNativeTarget "RRFormValidation" */;
+			buildPhases = (
+				751616433CD8A456B3646C22 /* [CP] Check Pods Manifest.lock */,
+				EE77C5F024B2FEFA00B7C702 /* Sources */,
+				EE77C5F124B2FEFA00B7C702 /* Frameworks */,
+				EE77C5F224B2FEFA00B7C702 /* Resources */,
+				FEB67BA3B97A6A9DDE6C4F91 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RRFormValidation;
+			productName = RRFormValidation;
+			productReference = EE77C5F424B2FEFA00B7C702 /* RRFormValidation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE77C5EC24B2FEFA00B7C702 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = RR;
+				TargetAttributes = {
+					EE77C5F324B2FEFA00B7C702 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = EE77C5EF24B2FEFA00B7C702 /* Build configuration list for PBXProject "RRFormValidation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE77C5EB24B2FEFA00B7C702;
+			productRefGroup = EE77C5F524B2FEFA00B7C702 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE77C5F324B2FEFA00B7C702 /* RRFormValidation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE77C5F224B2FEFA00B7C702 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE77C66724B305EF00B7C702 /* PhoneNumberMetadata.json in Resources */,
+				EE77C65224B305EE00B7C702 /* SVPinCell.xib in Resources */,
+				EE77C60424B2FEFC00B7C702 /* LaunchScreen.storyboard in Resources */,
+				EE77C65124B305EE00B7C702 /* SVPinView.xib in Resources */,
+				EE77C60124B2FEFC00B7C702 /* Assets.xcassets in Resources */,
+				EE77C5FF24B2FEFA00B7C702 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		751616433CD8A456B3646C22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RRFormValidation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEB67BA3B97A6A9DDE6C4F91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RRFormValidation/Pods-RRFormValidation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RRFormValidation/Pods-RRFormValidation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RRFormValidation/Pods-RRFormValidation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE77C5F024B2FEFA00B7C702 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE77C61024B3024300B7C702 /* RRFormViewController.swift in Sources */,
+				EE77C64E24B305EE00B7C702 /* SearchTextField.swift in Sources */,
+				EE77C61D24B303A700B7C702 /* FadeTransition.swift in Sources */,
+				EE77C66B24B305EF00B7C702 /* PartialFormatter.swift in Sources */,
+				EE77C67324B3076E00B7C702 /* RRFormTextField.swift in Sources */,
+				EE77C66424B305EF00B7C702 /* MetadataTypes.swift in Sources */,
+				EE77C66A24B305EF00B7C702 /* MetadataManager.swift in Sources */,
+				EE77C65924B305EF00B7C702 /* DecimalInputValidator.swift in Sources */,
+				EE77C66D24B305EF00B7C702 /* PhoneNumberKit.swift in Sources */,
+				EE77C66824B305EF00B7C702 /* NSRegularExpression+Swift.swift in Sources */,
+				EE77C66524B305EF00B7C702 /* MetadataParsing.swift in Sources */,
+				EE77C62024B3040900B7C702 /* RRBallRotate.swift in Sources */,
+				EE77C60E24B301E000B7C702 /* RRFormViewModel.swift in Sources */,
+				EE77C66F24B305EF00B7C702 /* PagingCollectionView.swift in Sources */,
+				EE77C64F24B305EE00B7C702 /* SVPinView.swift in Sources */,
+				EE77C65F24B305EF00B7C702 /* Constants.swift in Sources */,
+				EE77C66624B305EF00B7C702 /* ParseManager.swift in Sources */,
+				EE77C66124B305EF00B7C702 /* CountryCodePickerViewController.swift in Sources */,
+				EE77C60C24B301CE00B7C702 /* RRFormModel.swift in Sources */,
+				EE77C67924B31B3D00B7C702 /* RRFormButton.swift in Sources */,
+				EE77C65324B305EF00B7C702 /* FormTextFieldClearButton.swift in Sources */,
+				EE77C61E24B303A700B7C702 /* CGRectExtension.swift in Sources */,
+				EE77C65A24B305EF00B7C702 /* FormTextField.swift in Sources */,
+				EE77C66924B305EF00B7C702 /* Formatter.swift in Sources */,
+				EE77C65424B305EF00B7C702 /* FormTextFieldTypeManager.swift in Sources */,
+				EE77C5F824B2FEFA00B7C702 /* AppDelegate.swift in Sources */,
+				EE77C65E24B305EF00B7C702 /* Validation.swift in Sources */,
+				EE77C66024B305EF00B7C702 /* TextField.swift in Sources */,
+				EE77C61A24B303A700B7C702 /* SpinerLayer.swift in Sources */,
+				EE77C65824B305EF00B7C702 /* CardExpirationDateInputValidator.swift in Sources */,
+				EE77C65B24B305EF00B7C702 /* CardNumberFormatter.swift in Sources */,
+				EE77C61924B303A700B7C702 /* CustomTransitionViewController.swift in Sources */,
+				EE77C66C24B305EF00B7C702 /* PhoneNumberFormatter.swift in Sources */,
+				EE77C67724B317B600B7C702 /* General+Extensions.swift in Sources */,
+				EE77C65024B305EE00B7C702 /* SVPinField.swift in Sources */,
+				EE77C65724B305EF00B7C702 /* InputValidatable.swift in Sources */,
+				EE77C66224B305EF00B7C702 /* PhoneNumber.swift in Sources */,
+				EE77C65624B305EF00B7C702 /* InputValidator.swift in Sources */,
+				EE77C66E24B305EF00B7C702 /* PhoneNumberParser.swift in Sources */,
+				EE77C66324B305EF00B7C702 /* RegexManager.swift in Sources */,
+				EE77C65524B305EF00B7C702 /* RequiredInputValidator.swift in Sources */,
+				EE77C67524B3081200B7C702 /* Rx+Extension.swift in Sources */,
+				EE77C67B24B31B7C00B7C702 /* UIAlertController+Extension.swift in Sources */,
+				EE77C65D24B305EF00B7C702 /* Formattable.swift in Sources */,
+				EE77C67124B306BF00B7C702 /* TextField+Extension.swift in Sources */,
+				EE77C65C24B305EF00B7C702 /* CardExpirationDateFormatter.swift in Sources */,
+				EE77C61B24B303A700B7C702 /* TransitionButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE77C5FD24B2FEFA00B7C702 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE77C5FE24B2FEFA00B7C702 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE77C60224B2FEFC00B7C702 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE77C60324B2FEFC00B7C702 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE77C60624B2FEFC00B7C702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE77C60724B2FEFC00B7C702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE77C60924B2FEFC00B7C702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 342D0958BC677EC471B08941 /* Pods-RRFormValidation.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NMB3F8R5L9;
+				INFOPLIST_FILE = RRFormValidation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.im.RRFormValidation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EE77C60A24B2FEFC00B7C702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7201F28C1B9D3F4A5F87B8C /* Pods-RRFormValidation.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NMB3F8R5L9;
+				INFOPLIST_FILE = RRFormValidation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.im.RRFormValidation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE77C5EF24B2FEFA00B7C702 /* Build configuration list for PBXProject "RRFormValidation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE77C60624B2FEFC00B7C702 /* Debug */,
+				EE77C60724B2FEFC00B7C702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE77C60824B2FEFC00B7C702 /* Build configuration list for PBXNativeTarget "RRFormValidation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE77C60924B2FEFC00B7C702 /* Debug */,
+				EE77C60A24B2FEFC00B7C702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE77C5EC24B2FEFA00B7C702 /* Project object */;
+}

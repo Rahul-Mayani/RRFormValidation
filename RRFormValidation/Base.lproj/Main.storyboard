@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Form View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RRFormViewController" customModule="RRFormValidation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kWs-cg-cfM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4a-Vq-SCm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="661"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jYc-YG-0c1">
+                                                <rect key="frame" x="40" y="100" width="334" height="461"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Form validator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CV-Uh-Edu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8C-e2-Q9r">
+                                                        <rect key="frame" x="0.0" y="36.5" width="334" height="20"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="nj7-5X-2sf"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q67-wR-FWU" customClass="RRTextField" customModule="RRFormValidation" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="71.5" width="334" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="rjY-EH-8xo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Cd-6K-S1I" customClass="RRTextField" customModule="RRFormValidation" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="131.5" width="334" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vlv-VN-2Wd" userLabel="Mobile View">
+                                                        <rect key="frame" x="0.0" y="191.5" width="334" height="85.5"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile Number (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZSk-rm-9sr" customClass="RRPhoneNumberTextField" customModule="RRFormValidation" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*optional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2s8-n9-Iz7">
+                                                                <rect key="frame" x="0.0" y="45" width="334" height="40.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="textColor" red="0.3921568627" green="0.41568627450000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="ZSk-rm-9sr" secondAttribute="trailing" id="KaT-ch-sN2"/>
+                                                            <constraint firstItem="ZSk-rm-9sr" firstAttribute="leading" secondItem="Vlv-VN-2Wd" secondAttribute="leading" id="LMu-xx-BpG"/>
+                                                            <constraint firstItem="2s8-n9-Iz7" firstAttribute="trailing" secondItem="ZSk-rm-9sr" secondAttribute="trailing" id="N9S-O6-SVq"/>
+                                                            <constraint firstAttribute="bottom" secondItem="2s8-n9-Iz7" secondAttribute="bottom" id="Y8J-B2-HS4"/>
+                                                            <constraint firstItem="ZSk-rm-9sr" firstAttribute="top" secondItem="Vlv-VN-2Wd" secondAttribute="top" id="cge-LM-k7O"/>
+                                                            <constraint firstItem="2s8-n9-Iz7" firstAttribute="leading" secondItem="ZSk-rm-9sr" secondAttribute="leading" id="f9Z-hE-Xsr"/>
+                                                            <constraint firstItem="2s8-n9-Iz7" firstAttribute="top" secondItem="ZSk-rm-9sr" secondAttribute="bottom" id="uuJ-8b-1Iw"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myc-o9-IPB" userLabel="Password View">
+                                                        <rect key="frame" x="0.0" y="292" width="334" height="74"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6px-Pd-hyV" customClass="RRTextField" customModule="RRFormValidation" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*minimum 8 chars as must be one lower case, one upper case, one digit and one special character" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4G-0C-aXy">
+                                                                <rect key="frame" x="0.0" y="45" width="334" height="29"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="textColor" red="0.3921568627" green="0.41568627450000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="6px-Pd-hyV" secondAttribute="trailing" id="3AL-9l-axW"/>
+                                                            <constraint firstItem="6px-Pd-hyV" firstAttribute="leading" secondItem="Myc-o9-IPB" secondAttribute="leading" id="4oz-Wz-imu"/>
+                                                            <constraint firstItem="6px-Pd-hyV" firstAttribute="top" secondItem="Myc-o9-IPB" secondAttribute="top" id="Bix-jd-Ie0"/>
+                                                            <constraint firstAttribute="bottom" secondItem="z4G-0C-aXy" secondAttribute="bottom" id="FdD-Fj-67n"/>
+                                                            <constraint firstItem="z4G-0C-aXy" firstAttribute="top" secondItem="6px-Pd-hyV" secondAttribute="bottom" id="JwF-Ya-qwH"/>
+                                                            <constraint firstItem="z4G-0C-aXy" firstAttribute="trailing" secondItem="6px-Pd-hyV" secondAttribute="trailing" id="Yhd-pm-T6G"/>
+                                                            <constraint firstItem="z4G-0C-aXy" firstAttribute="leading" secondItem="6px-Pd-hyV" secondAttribute="leading" id="be8-MU-AWz"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Qh-XQ-FGR">
+                                                        <rect key="frame" x="0.0" y="381" width="334" height="20"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="ztA-V8-GMI"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cf2-QG-8Sh" customClass="RRFormButton" customModule="RRFormValidation" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="416" width="334" height="45"/>
+                                                        <state key="normal" title="SUBMIT"/>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="2Cd-6K-S1I" firstAttribute="height" secondItem="Q67-wR-FWU" secondAttribute="height" id="Lqx-bT-fZF"/>
+                                                    <constraint firstItem="6px-Pd-hyV" firstAttribute="height" secondItem="Q67-wR-FWU" secondAttribute="height" id="SME-v7-L27"/>
+                                                    <constraint firstItem="Cf2-QG-8Sh" firstAttribute="height" secondItem="Q67-wR-FWU" secondAttribute="height" id="SiW-ak-MCI"/>
+                                                    <constraint firstItem="ZSk-rm-9sr" firstAttribute="height" secondItem="Q67-wR-FWU" secondAttribute="height" id="vwe-S8-wrU"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="jYc-YG-0c1" secondAttribute="bottom" constant="100" id="9K1-AM-pGM"/>
+                                            <constraint firstItem="jYc-YG-0c1" firstAttribute="leading" secondItem="C4a-Vq-SCm" secondAttribute="leading" constant="40" id="JiZ-cM-sUP"/>
+                                            <constraint firstItem="jYc-YG-0c1" firstAttribute="top" secondItem="C4a-Vq-SCm" secondAttribute="top" constant="100" id="Lj8-jC-HdE"/>
+                                            <constraint firstAttribute="trailing" secondItem="jYc-YG-0c1" secondAttribute="trailing" constant="40" id="Y4W-cP-49F"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="C4a-Vq-SCm" firstAttribute="leading" secondItem="U7o-cc-oNL" secondAttribute="leading" id="K1j-rw-ZbH"/>
+                                    <constraint firstItem="C4a-Vq-SCm" firstAttribute="width" secondItem="J3e-xq-qdD" secondAttribute="width" id="Z3P-EZ-d2j"/>
+                                    <constraint firstItem="C4a-Vq-SCm" firstAttribute="bottom" secondItem="U7o-cc-oNL" secondAttribute="bottom" id="nfw-YE-uE2"/>
+                                    <constraint firstItem="C4a-Vq-SCm" firstAttribute="top" secondItem="U7o-cc-oNL" secondAttribute="top" id="pwc-Xv-eY1"/>
+                                    <constraint firstItem="C4a-Vq-SCm" firstAttribute="trailing" secondItem="U7o-cc-oNL" secondAttribute="trailing" id="wwN-4Q-Zn3"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="U7o-cc-oNL"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="J3e-xq-qdD"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kWs-cg-cfM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7mN-8R-b4j"/>
+                            <constraint firstItem="kWs-cg-cfM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FRC-QK-RU6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kWs-cg-cfM" secondAttribute="bottom" id="lcY-je-Ljy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kWs-cg-cfM" secondAttribute="trailing" id="zQy-rW-KH8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mailTextField" destination="2Cd-6K-S1I" id="CKI-Xi-o22"/>
+                        <outlet property="mobNoTextField" destination="ZSk-rm-9sr" id="GKn-TQ-0a1"/>
+                        <outlet property="nameTextField" destination="Q67-wR-FWU" id="GpJ-I7-gCl"/>
+                        <outlet property="passwordTextField" destination="6px-Pd-hyV" id="7j5-cj-XVA"/>
+                        <outlet property="submitButton" destination="Cf2-QG-8Sh" id="Kl6-ph-dxc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
