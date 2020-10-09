@@ -17,23 +17,14 @@ class RRFormViewModel {
     let emailSubject = BehaviorRelay<String?>(value: nil)
     let mobileSubject = BehaviorRelay<String?>(value: nil)
     let passwordSubject = BehaviorRelay<String?>(value: nil)
-    //let submitDidTapSubject = BehaviorRelay<String?>(value: nil)
     let submitButtonEnabled = BehaviorRelay(value: false)
     
     let formLoadingSubject: BehaviorRelay<Bool> = BehaviorRelay.init(value: false)
-    //let formResultSubject: BehaviorRelay<RRFormModel> = BehaviorRelay.init(value: RRFormModel())
     
     private let mobileTextField = RRPhoneNumberTextField.init(frame: CGRect(0, 0, 0, 0))
     
     private let disposeBag = DisposeBag()
-    /*
-    private var getFormDataObservable: Observable<RRFormModel> {
-        return Observable.combineLatest(nameSubject.asObservable(), emailSubject.asObservable(), mobileSubject.asObservable(), passwordSubject.asObservable()) { (name, email, mobile, password) in
-            self.mobileTextField.text = mobile
-            return RRFormModel.init(name: name!, email: email!, mobile: !(self.mobileTextField.text?.isEmpty ?? false) ? self.mobileTextField.getNumber() : "", password: password!, countryCode: self.mobileTextField.getNumberCode())
-        }
-    }
-    */
+    
     lazy var submitAction: Action<Void, RRFormModel> = {
         return Action(enabledIf: self.submitButtonEnabled.asObservable()) {
             self.formLoadingSubject.accept(true)
@@ -63,25 +54,5 @@ class RRFormViewModel {
                     (!email.isNilOrEmpty ? email!.isValidEmail() : false) &&
                     (!mobile.isNilOrEmpty ? (self?.mobileTextField.isValidNumber ?? false) : true)
         } ~> submitButtonEnabled => disposeBag // One-way binding is donated by ~>
-        /*
-        submitDidTapSubject
-            .withLatestFrom(self.getFormDataObservable)
-            /*.flatMapLatest { fromData in
-                // Get response from API calls
-                return apiCall.validate(with: fromData)
-            }*/
-            .subscribe(onNext: { [weak self] (fromData) in
-                self?.formLoadingSubject.accept(true)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) { [weak self] in
-                    self?.formLoadingSubject.accept(false)
-                    self?.formResultSubject.accept(fromData)
-                }
-            }, onError: { [weak self] (error) in
-                print(error)
-                self?.formLoadingSubject.accept(false)
-            }, onCompleted: { [weak self] in
-                self?.formLoadingSubject.accept(false)
-            }).disposed(by: disposeBag)
-        */
     }
 }
