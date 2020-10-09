@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Action
 
 class RRFormViewController: UIViewController {
 
@@ -29,11 +30,11 @@ class RRFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        validator()
+        //validator()
         setFormViewModel()
         //setupAllButton()
     }
-    
+    /*
     // MARK: - Others -
     fileprivate func validator() {
         
@@ -46,10 +47,17 @@ class RRFormViewController: UIViewController {
         }.bind(to: submitButton.rx.valid).disposed(by: rxbag)
         */
     }
-    
+    */
     fileprivate func setFormViewModel() {
+                
+        formViewModel.nameSubject <~> nameTextField.rx.text => rxbag // Two-way binding is donated by <~>
+        formViewModel.emailSubject <~> mailTextField.rx.text => rxbag // Two-way binding is donated by <~>
+        formViewModel.mobileSubject <~> mobNoTextField.rx.text => rxbag // Two-way binding is donated by <~>
+        formViewModel.passwordSubject <~> passwordTextField.rx.text => rxbag // Two-way binding is donated by <~>
+        formViewModel.submitButtonEnabled ~> submitButton.rx.valid => rxbag // One-way binding is donated by ~>
+        submitButton.rx.bind(to: formViewModel.submitAction, input: ()) // action binding
         
-        nameTextField.rx.text.asObservable()
+        /*nameTextField.rx.text.asObservable()
             .ignoreNil()
             .subscribe(formViewModel.nameSubject)
             .disposed(by: rxbag)
@@ -73,7 +81,14 @@ class RRFormViewController: UIViewController {
             .debounce(.milliseconds(1), scheduler: RXScheduler.main)
             .subscribe(formViewModel.submitDidTapSubject)
             .disposed(by: rxbag)
+        */
         
+        formViewModel.submitAction.executionObservables.switchLatest()
+        .subscribe(onNext: { formData in
+            print(formData.parameters as Any)
+            UIAlertController.showAlert(title: "Form Validator", message: "Success")
+        }) => rxbag
+        /*
         formViewModel.formResultSubject
             .filter({ (formData) -> Bool in
                 return !formData.email.isEmpty
@@ -82,18 +97,19 @@ class RRFormViewController: UIViewController {
                 self.submitButton?.stopAnimation()
                 print(formData.parameters as Any)
                 UIAlertController.showAlert(title: "Form Validator", message: "Success")
-            }).disposed(by: rxbag)
+            }) => rxbag
+        */
         
-        formViewModel.formLoadingSubject
+        formViewModel.formLoadingSubject.skip(1)
         .subscribe(onNext: { [weak self] (isLoading) in
             guard let self = self else {return}
             self.view.endEditing(true)
             if isLoading {
                 self.submitButton?.startAnimation()
-            } /*else {
+            } else {
                 self.submitButton?.stopAnimation()
-            }*/
-        }).disposed(by: rxbag)
+            }
+        }) => rxbag
     }
     /*
     // MARK: - Buttons Action -

@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 
+public extension Optional where Wrapped == String {
+    
+    var isNilOrEmpty: Bool {
+        return self == nil || self!.isEmpty
+    }
+}
+
 extension Encodable {
     var parameters: [String: Any]? {
         guard let data = try? JSONEncoder().encode(self) else { return nil }

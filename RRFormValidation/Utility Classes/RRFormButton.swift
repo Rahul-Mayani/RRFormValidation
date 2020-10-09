@@ -28,14 +28,14 @@ class RRFormButton: TransitionButton {
     
     func commonInit(){
         
-        spinnerColor = UIColor.white
+        spinnerColor = .white
         cornerRadius = 5.0//height / 2
-        titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        setTitleColor(UIColor.white, for: .normal)
+        titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
+        setTitleColor(.white, for: .normal)
         setTitle(titleLabel?.text, for: .normal)
         setTitle(titleLabel?.text, for: .disabled)
-        setTitleColor(UIColor.white, for: .disabled)
-        backgroundColor = UIColor.blue
+        setTitleColor(.white, for: .disabled)
+        backgroundColor = .blue
         layer.masksToBounds = true
     }
     

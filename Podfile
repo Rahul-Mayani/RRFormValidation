@@ -8,6 +8,7 @@ target 'RRFormValidation' do
   # Pods for RRFormValidation
   pod 'RxCocoa'
   pod 'RxSwift'
+  pod 'Action'
   pod 'IQKeyboardManagerSwift'
 
 end

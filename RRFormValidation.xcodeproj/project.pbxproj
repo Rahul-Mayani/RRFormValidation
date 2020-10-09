@@ -61,6 +61,7 @@
 		EE77C67724B317B600B7C702 /* General+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C67624B317B600B7C702 /* General+Extensions.swift */; };
 		EE77C67924B31B3D00B7C702 /* RRFormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C67824B31B3D00B7C702 /* RRFormButton.swift */; };
 		EE77C67B24B31B7C00B7C702 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77C67A24B31B7C00B7C702 /* UIAlertController+Extension.swift */; };
+		EEF70782253044410073F628 /* RRBindingOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF70781253044410073F628 /* RRBindingOperators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		EE77C67624B317B600B7C702 /* General+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "General+Extensions.swift"; sourceTree = "<group>"; };
 		EE77C67824B31B3D00B7C702 /* RRFormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRFormButton.swift; sourceTree = "<group>"; };
 		EE77C67A24B31B7C00B7C702 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		EEF70781253044410073F628 /* RRBindingOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRBindingOperators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				EE77C67424B3081200B7C702 /* Rx+Extension.swift */,
 				EE77C67224B3076E00B7C702 /* RRFormTextField.swift */,
 				EE77C67824B31B3D00B7C702 /* RRFormButton.swift */,
+				EEF70781253044410073F628 /* RRBindingOperators.swift */,
 			);
 			path = "Utility Classes";
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				EE77C64F24B305EE00B7C702 /* SVPinView.swift in Sources */,
 				EE77C65F24B305EF00B7C702 /* Constants.swift in Sources */,
 				EE77C66624B305EF00B7C702 /* ParseManager.swift in Sources */,
+				EEF70782253044410073F628 /* RRBindingOperators.swift in Sources */,
 				EE77C66124B305EF00B7C702 /* CountryCodePickerViewController.swift in Sources */,
 				EE77C60C24B301CE00B7C702 /* RRFormModel.swift in Sources */,
 				EE77C67924B31B3D00B7C702 /* RRFormButton.swift in Sources */,

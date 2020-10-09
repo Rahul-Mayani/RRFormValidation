@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-RRFormValidation/Pods-RRFormValidation-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Action/Action.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
 ${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework

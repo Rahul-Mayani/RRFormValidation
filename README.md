@@ -1,4 +1,11 @@
 # RRFormValidation
+
+[![iOS](https://img.shields.io/badge/Platform-iOS-orange.svg?style=flat)](https://developer.apple.com/ios/)
+[![Swift 5+](https://img.shields.io/badge/Swift-5+-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Validation](https://img.shields.io/badge/Rx-Validation-orange.svg?style=flat)](https://github.com/Rahul-Mayani/RRFormValidation/)
+[![Architecture](https://img.shields.io/badge/Architecture%20Pattern-MVVM-green.svg?style=flat)](https://github.com/Rahul-Mayani/RRFormValidation/)
+
+
 Form validation by RxSwift with MVVM architecture
 
 ## Example
@@ -9,6 +16,8 @@ Form validation by RxSwift with MVVM architecture
 pod 'RxCocoa'
 
 pod 'RxSwift'
+
+pod 'Action'
 
 pod 'IQKeyboardManagerSwift'
 
@@ -25,34 +34,26 @@ To run the example project, clone the repo, and run pod install from the Example
 
 ```swift
 
-nameTextField.rx.text.asObservable()
-.ignoreNil()
-.subscribe(formViewModel.nameSubject)
-.disposed(by: rxbag)
+formViewModel.nameSubject <~> nameTextField.rx.text => rxbag // Two-way binding is donated by <~>
+formViewModel.submitButtonEnabled ~> submitButton.rx.valid => rxbag // One-way binding is donated by ~>
+submitButton.rx.bind(to: formViewModel.submitAction, input: ()) // action binding
 
-submitButton.rx.tap.asObservable()
-.debounce(.milliseconds(1), scheduler: RXScheduler.main)
-.subscribe(formViewModel.submitDidTapSubject)
-.disposed(by: rxbag)
-
-formViewModel.formResultSubject
-.filter({ (formData) -> Bool in
-    return !formData.email.isEmpty
-})
+formViewModel.submitAction.executionObservables.switchLatest()
 .subscribe(onNext: { formData in
-    self.submitButton?.stopAnimation()
     print(formData.parameters as Any)
     UIAlertController.showAlert(title: "Form Validator", message: "Success")
-}).disposed(by: rxbag)
+}) => rxbag
 
-formViewModel.formLoadingSubject
+formViewModel.formLoadingSubject.skip(1)
 .subscribe(onNext: { [weak self] (isLoading) in
     guard let self = self else {return}
     self.view.endEditing(true)
     if isLoading {
         self.submitButton?.startAnimation()
+    } else {
+        self.submitButton?.stopAnimation()
     }
-}).disposed(by: rxbag)
+}) => rxbag
 
 ```
 
