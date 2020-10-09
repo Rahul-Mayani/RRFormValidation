@@ -9,7 +9,7 @@
 Form validation by RxSwift with MVVM architecture
 
 ## Example
-![alt text](https://github.com/Rahul-Mayani/RRFormValidation/blob/master/sample.gif)
+![alt text](https://github.com/Rahul-Mayani/RRFormValidation/blob/master/sample.mov)
 
 ## Requirements
 
